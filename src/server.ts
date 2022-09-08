@@ -61,7 +61,7 @@ import {Router, Response, Request} from 'express';
     const image_url = req.query.image_url.toString();
     if(image_url.length == 0)
     {
-      res.status(400).send("Ressource not found");
+      res.status(400).send("Image not found");
     }
 
     const filterImage: string = await filterImageFromURL( image_url);
