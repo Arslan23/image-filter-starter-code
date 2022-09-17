@@ -64,7 +64,7 @@ import {Router, Response, Request} from 'express';
       res.status(400).send("Image not found");
     }
 
-    const filterImage: string = await filterImageFromURL( image_url);
+    const filterImage: string = await filterImageFromURL(image_url);
 
     res.status(200).sendFile(filterImage, ()=>{
        deleteLocalFiles([filterImage]);
